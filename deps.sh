@@ -60,8 +60,8 @@ if [ $UID -eq 0 ]
 then
     SUDO=""
 else
-    SUDO="sudo"
-    REQUIRED_UTILS="sudo $REQUIRED_UTILS"
+    SUDO=""
+    REQUIRED_UTILS="$REQUIRED_UTILS"
 fi
 
 function install_yaffshiv
@@ -254,7 +254,7 @@ if [ $? -ne 0 ]
     echo "Package installation failed: $PKG_CANDIDATES"
     exit 1
 fi
-install_pip_package matplotlib
+install_pip_package matplotlib==2.2.4
 install_pip_package capstone
 install_sasquatch
 install_yaffshiv
