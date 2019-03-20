@@ -73,7 +73,7 @@ function install_yaffshiv
 
 function install_sasquatch
 {
-    git clone https://github.com/devttys0/sasquatch
+    git clone https://github.com/wooy0ung/sasquatch
     (cd sasquatch && $SUDO ./build.sh)
     $SUDO rm -rf sasquatch
 }
